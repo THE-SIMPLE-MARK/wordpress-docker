@@ -28,12 +28,14 @@ This is quick tutorial is primarly for Ubuntu-based systems. You can substitute 
    
    Both files provide a basic example of the multi-domain routing. You need to replace `{DOMAIN1}` and `{DOMAIN2}` as with your actual domain(s).
    You can remove the instances of the second domain with a pretty basic knowledge of NGINX's config syntax if you only intend to use one or add more if you need more instances.
+   
    ```bash
    sudo nano /main_nginx/nginx_http.conf
    # or
    sudo nano /main_nginx/nginx_https.conf
    ```
 4. Override the default NGINX config with your own
+   
    ```
    sudo cp /main_nginx/nginx_http.conf /etc/nginx/nginx.conf
    # or
@@ -45,5 +47,7 @@ This is quick tutorial is primarly for Ubuntu-based systems. You can substitute 
    TODO
 7. Create env variable
    TODO
+8. Create site NGINX config
+   TODO
 9. Execute docker-compose
-    TODO
+   TODO
