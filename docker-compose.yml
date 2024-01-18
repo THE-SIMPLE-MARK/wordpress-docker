@@ -31,6 +31,10 @@ services:
       - WORDPRESS_DB_PASSWORD=$MYSQL_PASSWORD
     volumes:
       - wordpress-data:/var/www/html
+      - /sites/{DOMAIN_NAME}/nginx:/etc/nginx # so plugins like W3 total cache can see & validate the nginx config
+      - type: bind # for adding custom PHP configs
+        source: /sites/{DOMAIN_NAME}/php-config.ini
+        target: /usr/local/etc/php/conf.d/php-config.ini
     networks:
       - app-network
     cpus: 1
